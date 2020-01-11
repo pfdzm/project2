@@ -1,9 +1,22 @@
-<h1>Supermarkets</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<title>MVC With Cats!</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/assets/js/bundle.js"></script>
+	</head>
+	<body>
+		<h1>Welcome to project2, an anonymous topic-based forum</h1>
 
-<h2>Choose a supermarket</h2>
+    <h2>Choose a topic that interests you</h2>
 
-<ul>
-  {{#each supermarket}}
-  {{> supermarket/supermarket-block}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each topic}}
+      {{> topic/topic-block}}
+      {{/each}}
+    </ul>
+    <div id="topicDetails"></div>
+	</body>
+</html>
