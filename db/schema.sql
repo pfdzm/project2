@@ -24,11 +24,11 @@ CREATE TABLE users
 CREATE TABLE posts
 (
 	id int NOT NULL AUTO_INCREMENT,
-	poster_id int NOT NULL,
+	user_id int NOT NULL,
 	topic_id int NOT NULL,
 	post_content TEXT NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (poster_id)
+	FOREIGN KEY (user_id)
 	REFERENCES users(id),
 	FOREIGN KEY (topic_id)
 	REFERENCES topics(id)
