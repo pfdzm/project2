@@ -54,6 +54,16 @@ const orm = {
       cb(result);
     });
   },
+  select(tableInput, whereCondition, cb) {
+    const queryString = `SELECT * FROM ${tableInput}
+    WHERE ${whereCondition}`;
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
   create(table, cols, vals, cb) {
     let queryString = `INSERT INTO ${table}`;
 
@@ -102,6 +112,14 @@ const orm = {
         throw err;
       }
 
+      cb(result);
+    });
+  },
+  execute(queryString, cb) {
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
       cb(result);
     });
   }
