@@ -1,5 +1,17 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
+  $(".pick-topic").on("click", function(event) {
+    const id = $(this).data("id");
+    const topic = $(this).val();
+
+    $.get(`/topic/${id}`)
+    .then(function(q) {
+      console.log("loading topic ", q);
+      $("#topicDetails").html(q.toString())
+    });
+  });
+
+
   $(".pick-supermarket").on("click", function(event) {
     const id = $(this).data("id");
     const newSleep = $(this).data("newsleep");

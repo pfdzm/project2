@@ -1,9 +1,24 @@
-<h1>Supermarkets</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Choose a supermarket</h2>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <title>IVum</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/assets/js/bundle.js"></script>
+</head>
 
-<ul>
-  {{#each supermarket}}
-  {{> supermarket/supermarket-block}}
-  {{/each}}
-</ul>
+<body>
+  <h1>Welcome to IVum</h1>
+  <h2>Topics</h2>
+  <a href="#">Submit a new discussion topic</a>
+  <ul>
+    {{#each topic}}
+    {{> topic/topic-block}}
+    {{/each}}
+  </ul>
+  <div id="topicDetails"></div>
+</body>
+
+</html>
