@@ -10,14 +10,14 @@ DROP TABLE users;
 CREATE TABLE topics
 (
 	id int NOT NULL AUTO_INCREMENT,
-	topicname varchar(255) NOT NULL,
+	topicname varchar(255) NOT NULL UNIQUE,
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE users
 (
 	id int NOT NULL AUTO_INCREMENT,
-	username varchar(255) NOT NULL,
+	username varchar(255) NOT NULL UNIQUE,
 	PRIMARY KEY (id)
 );
 
