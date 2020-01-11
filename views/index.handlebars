@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>MVC With Cats!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/bundle.js"></script>
-	</head>
-	<body>
-		<h1>Welcome to project2, an anonymous topic-based forum</h1>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <title>IVum</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/assets/js/bundle.js"></script>
+</head>
 
-    <h2>Choose a topic that interests you</h2>
+<body>
+  <h1>Welcome to IVum</h1>
+  <h2>Topics</h2>
+  <a href="#">Submit a new discussion topic</a>
+  <ul>
+    {{#each topic}}
+    {{> topic/topic-block}}
+    {{/each}}
+  </ul>
+  <div id="topicDetails"></div>
+</body>
 
-    <ul>
-      {{#each topic}}
-      {{> topic/topic-block}}
-      {{/each}}
-    </ul>
-    <div id="topicDetails"></div>
-	</body>
 </html>
